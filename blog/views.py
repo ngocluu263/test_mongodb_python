@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from models import Post
+from blog.models import Post
 import datetime
 
 # Create your views here.

@@ -6,7 +6,7 @@
   </head> 
   <body>
     <h1>Blongo</h1>
-    <form method="post" action="http://182.92.229.136:8080/">
+    <form method="post" action="http://localhost:8000/">
       {% csrf_token %}
       <ul>
         <li>
@@ -26,14 +26,14 @@
       <h2> {{ post.title }} </h2>
       <p>{{ post.last_update }}</p>
       <p>{{ post.content }}</p>
-      <form method="get" action="http://182.92.229.136:8080/update">
+      <form method="get" action="http://localhost:8000/update">
         <input type="hidden" name="id" value="{{ post.id }}">
         <input type="hidden" name="title" value="{{ post.title }}">
         <input type="hidden" name="last_update" value="{{ post.last_update }}">
         <input type="hidden" name="content" value="{{ post.content }}">
         <input type="submit" name="" value="update">
       </form>
-      <form method="get" action="http://182.92.229.136:8080/delete">
+      <form method="get" action="http://localhost:8000/delete">
         <input type="hidden" name="id" value="{{post.id}}">
         <input type="submit" value="delete">
       </form>
